@@ -12,16 +12,24 @@ const usersRouter = express.Router();
 /*
  * Testing Object:
 {
-  "firstName": "Mhmd",
-  "lastName": "Jouza",
+   "firstName": "fouad",
+  "lastName": "hijazi",
   "country": "Jordan",
-  "email":"Jouza@hotmail.com",
+  "email":"fouadhijazi92@gmail.com",
   "password": "123456",
-  "role":"61d03786a0848857b2c15026"
-
-});
-}
-*/
+  "role":"627a3feb52be2ae46b48b616"
+});*/ 
+/*
+* Testing Object: User
+{
+   "firstName": "Amine",
+  "lastName": "Alwani",
+  "country": "Syria",
+  "email":"Amine@gmail.com",
+  "password": "123456",
+  "role":"627a3fc4905d75517127c1f0"
+  }
+});*/ 
 
 usersRouter.post("/", register);
 
