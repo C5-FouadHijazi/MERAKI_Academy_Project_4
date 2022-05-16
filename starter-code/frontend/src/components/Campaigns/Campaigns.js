@@ -2,10 +2,7 @@ import "./Campaigns.css";
 import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
 import { tokenContext } from "../../App";
-
-
-
-
+import { Link } from "react-router-dom";
 
 const Campaigns = () => {
   const [campaigns, setCampaigns] = useState([]);
@@ -16,52 +13,6 @@ const Campaigns = () => {
   const { token, setToken, islogin, setIslogin, message, setMessage } =
     useContext(tokenContext);
   setToken(localStorage.getItem("token"));
-
-
-
-  const GetAllSituations = () => {
-    //http://localhost:3000/Campaigns/(Campaigns.title)building_mosques/situations
-    console.log("hello");
-
-
-    const [situations, setSituations] = useState([]);
-
-    const { token, setToken, islogin, setIslogin, message, setMessage } =
-      useContext(tokenContext);
-    setToken(localStorage.getItem("token"));
-
-    useEffect(() => {
-      axios
-        .get("http://localhost:5000/campaigns/:id/situations", {
-          headers: {
-            authorization: `Bearer ${token}`,
-          },
-        })
-        .then((result) => {
-          console.log(result);
-          setSituations(result.data.situations);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    }, []);
-
-    return (
-      <div className="Main-Situations-Dev">
-        {situations &&
-          situations.map((element, index) => {
-            return (
-              <div className="Situations-dev" key={element.id}>
-                <h2>{element.title}</h2>
-                <h3>{element.description}</h3>
-                <button>Donate</button>
-              </div>
-            );
-          })}
-      </div>
-    ); 
-  };
-  
 
   useEffect(() => {
     axios
@@ -84,13 +35,11 @@ const Campaigns = () => {
       {campaigns &&
         campaigns.map((element, index) => {
           return (
-            <div className="campaigns-dev" 
-               key={element.id}>
-              {/* <p>{element.img}</p> */}
-              <img src={element.img}/>
+            <div className="campaigns-dev" key={element.id}>
+              <img src={element.img} />
               <h2>{element.title}</h2>
               <h3>{element.description}</h3>
-              <button onClick={GetAllSituations}>More</button>
+              <Link to={`/campaigns/setiation/${element._id}`}>More</Link>
             </div>
           );
         })}
