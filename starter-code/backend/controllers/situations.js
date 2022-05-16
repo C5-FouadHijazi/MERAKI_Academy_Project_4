@@ -69,40 +69,43 @@ const updateSituationById = (req, res) => {
   console.log("paramIf", _id, "amountDonated", req.body.amountDonated);
   const newDonate = req.body.amountDonated;
 
-  situationsModel.find({ _id }).then((result1) => {
-  // console.log("result1:",result1)
-  // console.log("amoutStillNedded", result1[0].amoutStillNedded);
-  /* calculation= await result[0].amoutStillNedded - newDonate */
-  situationsModel
-    .findByIdAndUpdate(
-      _id,
-      {
-        amountDonated: req.body.amountDonated,
-        amountNedded: result1[0].amoutStillNedded - newDonate,
-      },
-      { new: true }
-    )
-    .then((result2) => {
-      console.log("result2:", result2);
-      if (!result2) {
-        return res.status(404).json({
-          success: false,
-          message: `The Situation: ${_id} is not found`,
+ const result1 = await situationsModel.find({ _id }).then((result1) => {
+    //try 
+    // console.log("result1:",result1)
+    // console.log("amoutStillNedded", result1[0].amoutStillNedded);
+    /* calculation= await result[0].amoutStillNedded - newDonate */
+    situationsModel
+      .findByIdAndUpdate(
+        _id,
+        {
+          $set: {
+            amountDonated: req.body.amountDonated,
+            amountNedded: result1[0].amoutStillNedded - newDonate,
+          },
+        },
+        { new: true }
+      )
+      .then((result2) => {
+        console.log("result2:", result2);
+        if (!result2) {
+          return res.status(404).json({
+            success: false,
+            message: `The Situation: ${_id} is not found`,
+          });
+        }
+        res.status(202).json({
+          success: true,
+          message: `Situation updated`,
+          Situation: result2,
         });
-      }
-      res.status(202).json({
-        success: true,
-        message: `Situation updated`,
-        Situation: result2,
+      })
+      .catch((err) => {
+        res.status(500).json({
+          success: false,
+          message: `Server Error`,
+          err: err.message,
+        });
       });
-    })
-    .catch((err) => {
-      res.status(500).json({
-        success: false,
-        message: `Server Error`,
-        err: err.message,
-      });
-    });
   });
   // console.log(
   //   situationsModel.find({ _id }).then(async (result) => {

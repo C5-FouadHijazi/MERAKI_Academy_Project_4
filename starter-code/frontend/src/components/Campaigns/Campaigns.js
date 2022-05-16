@@ -39,7 +39,7 @@ const Campaigns = () => {
               <img src={element.img} />
               <h2>{element.title}</h2>
               <h3>{element.description}</h3>
-              <Link to={`/campaigns/setiation/${element._id}`}>More</Link>
+              <button><Link to={`/campaigns/setiation/${element._id}`}>More</Link></button>
             </div>
           );
         })}
