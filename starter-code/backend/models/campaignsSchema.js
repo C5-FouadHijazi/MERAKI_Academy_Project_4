@@ -5,7 +5,7 @@ const campaigns = new mongoose.Schema({
   description: { type: String, required: true },
   img: { type: String, required: true },
   // catId from situation
-  situation: { type: mongoose.Schema.Types.ObjectId, ref: "Situations" },
+  situation: [{ type: mongoose.Schema.Types.ObjectId, ref: "Situations" }],
 });
 
 module.exports = mongoose.model("Campaigns", campaigns);
