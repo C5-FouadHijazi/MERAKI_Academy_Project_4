@@ -3,6 +3,10 @@ import axios from "axios";
 import "./Home.css";
 import { tokenContext } from "../../App";
 
+import Slider from "../Slider/slider";
+
+
+
 const Home = () => {
   const { token, setToken, islogin, setIslogin, message, setMessage } =
     useContext(tokenContext);
@@ -22,8 +26,9 @@ const Home = () => {
 
   return (
     <div>
-      
-      <div className="Home-Main-Pic-dev"></div>
+      <Slider />
+     {/*  <div 
+      className="Home-Main-Pic-dev"></div> */}
 <div>
   <h1>MISSION, VISION & VALUES</h1>
 </div>
