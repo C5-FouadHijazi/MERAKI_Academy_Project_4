@@ -1,11 +1,14 @@
 import "./App.css";
 import React, { useState, createContext, useEffect } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, useParams } from "react-router-dom";
 
 import Register from "./components/Register/Register";
 import Login from "./components/Login/Login";
 import Navbar from "./components/Navbar/Navbar";
 import Campaigns from "./components/Campaigns/Campaigns";
+
+import Home from "./components/Home/Home";
+import Situations from "./components/Situations/situations";
 
 export const tokenContext = createContext();
 
@@ -26,18 +29,19 @@ const App = () => {
           setIslogin,
         }}
       >
+        {/* <Navigation /> */}
         <Navbar />
-        <div className="Home-Main-Pic-dev"></div>
-        
+
         <Routes>
           <Route path="/Register" element={<Register />} />
 
           <Route path="/login" element={<Login />} />
           <Route path="/campaigns" element={<Campaigns />} />
-        </Routes>
 
-        
-        
+          <Route path="/campaigns/setiation/:id" element={<Situations />} />
+
+          <Route path="/Home" element={<Home />} />
+        </Routes>
       </tokenContext.Provider>
     </div>
   );
