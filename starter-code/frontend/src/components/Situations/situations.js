@@ -15,7 +15,7 @@ const Situations = () => {
   const { id } = useParams();
   console.log("situdations:", id);
 
-  const update = () => {
+  const get = () => {
     axios
       .get(`http://localhost:5000/campaigns/${id}/situations`, {
         headers: {
@@ -23,7 +23,23 @@ const Situations = () => {
         },
       })
       .then((result) => {
-        console.log(result);
+        //console.log(result);
+        setSituations(result.data.situations);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const update = () => {
+    axios
+      .put(`http://localhost:5000/campaigns/situations/${id}`, {
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      })
+      .then((result) => {
+        console.log("Update :", result);
         setSituations(result.data.situations);
       })
       .catch((err) => {
@@ -32,6 +48,7 @@ const Situations = () => {
   };
 
   useEffect(() => {
+    get();
     update();
   }, []);
 
@@ -55,9 +72,9 @@ const Situations = () => {
                 onClick={() => {
                   if (islogin) {
                     update();
-                    navigate("/Payments")
+                    navigate("/Payments");
                   }
-                  navigate("/login")
+                  navigate("/login");
                 }}
               >
                 Donate

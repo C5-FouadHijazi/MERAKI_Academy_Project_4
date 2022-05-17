@@ -1,13 +1,13 @@
 import React from "react";
 import { Zoom } from "react-slideshow-image";
-import image1 from "../images/1.jpg";
-import image2 from "../images/2.jpg";
-import image4 from "../images/4.jpg";
-import image9 from "../images/9.jpg";
+import image1 from "../images/1.png";
+import image2 from "../images/2.png";
+import image3 from "../images/3.png";
+import image4 from "../images/4.png";
 // style was imported in index.css
 // import "react-slideshow-image/dist/styles.css";
 
-const images = [image1, image2, image4, image9]
+const images = [image1, image2, image3, image4]
 
 const zoomOutProperties = {
   duration: 5000,
@@ -25,7 +25,7 @@ const Slideshow = () => {
         {images.map((each, index) => (
           <img
             key={index}
-            style={{ width: "100%", height: "40rem" }}
+            style={{ width: "100%", height: "38rem" }}
             src={each}
           />
         ))}
