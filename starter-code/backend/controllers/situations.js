@@ -66,27 +66,21 @@ const createNewSituations = (req, res) => {
 // This function updates Campaign by its id
 const updateSituationById = (req, res) => {
   const _id = req.params.id;
-  console.log("paramIf", _id, "amountDonated", req.body.amountDonated);
   const newDonate = req.body.amountDonated;
 
- const result1 = await situationsModel.find({ _id }).then((result1) => {
-    //try 
-    // console.log("result1:",result1)
-    // console.log("amoutStillNedded", result1[0].amoutStillNedded);
-    /* calculation= await result[0].amoutStillNedded - newDonate */
+  situationsModel.findById({ _id }).then((result1) => {
     situationsModel
-      .findByIdAndUpdate(
-        _id,
+      .updateOne(
+        {_id},
         {
           $set: {
-            amountDonated: req.body.amountDonated,
-            amountNedded: result1[0].amoutStillNedded - newDonate,
+            amountNedded: result1.amountNedded - newDonate,
+            amountDonated: result1.amountDonated + newDonate,
           },
         },
         { new: true }
       )
       .then((result2) => {
-        console.log("result2:", result2);
         if (!result2) {
           return res.status(404).json({
             success: false,
