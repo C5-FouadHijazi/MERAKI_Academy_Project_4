@@ -1,0 +1,10 @@
+.Login-Continer{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    border: 2px solid;
+    width: 50%;
+    padding: 2rem;
+    margin-left: 30%;
+    margin-top: 10%;
+}

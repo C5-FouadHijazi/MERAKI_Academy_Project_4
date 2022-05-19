@@ -6,7 +6,7 @@ import { tokenContext } from "../../App";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { token, setToken, islogin, setIslogin, message,setMessage  } =
+  const { token, setToken, islogin, setIslogin, message, setMessage } =
     useContext(tokenContext);
 
   const LogIN = () => {
@@ -20,44 +20,54 @@ const Login = () => {
         localStorage.setItem("token", result.data.token);
         setToken(result.data.token);
         setIslogin(true);
-        
+
         //clg -> token in ls
         console.log(setIslogin);
       })
       .catch((err) => {
-        setMessage(err.res.data.message)
+        setMessage(err.res.data.message);
       });
   };
 
   return (
-    <div>
+    <div className="Login-Continer">
       <p>Login:</p>
 
+      <div>
+      <h6 class="fa-solid fa-at" >  Email:</h6>
+      <br />
       <input
         type={"text"}
-        placeholder={"email"}
+        placeholder={"Email Address*"}
         onChange={(e) => {
           setEmail(e.target.value);
         }}
       />
+</div>
+
       <br />
-      <input
-        type={"password"}
-        placeholder={"password"}
-        onChange={(e) => {
-          setPassword(e.target.value);
-        }}
-      />
+      <div >
+        <h6 class="fa-solid fa-lock">  Password:</h6>
+        <br />
+        <input
+          type={"password"}
+          placeholder={"Password*"}
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
+        />
+      </div>
 
       <br />
       <button onClick={LogIN}>Login</button>
 
-      <h5>
+      <br />
+      <h6>
         *By logging in, you agree to our Terms of Use and to receive Atta emails
         & updates and acknowledge that you read our Privacy Policy. This site is
         protected by reCAPTCHA Enterprise and the Google Privacy Policy And
         Terms of Use apply
-      </h5>
+      </h6>
 
       <p className={islogin ? "successful" : "error"}>{message}</p>
     </div>
