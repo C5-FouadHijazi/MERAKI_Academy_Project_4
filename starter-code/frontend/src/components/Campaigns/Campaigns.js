@@ -6,9 +6,6 @@ import { Link } from "react-router-dom";
 
 const Campaigns = () => {
   const [campaigns, setCampaigns] = useState([]);
-  const [image, setimage] = useState("");
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
 
   const { token, setToken, islogin, setIslogin, message, setMessage } =
     useContext(tokenContext);
@@ -36,10 +33,10 @@ const Campaigns = () => {
         campaigns.map((element, index) => {
           return (
             <div className="campaigns-dev" key={element.id}>
-              <img src={element.img} />
-              <h2>{element.title}</h2>
-              <h3>{element.description}</h3>
-              <button><Link to={`/campaigns/setiation/${element._id}`}>More</Link></button>
+              <img className="Pic-Div"  src={element.img} />
+              <div className="Camapigin-Name-Div"><h2 className="Title-Camapigin">{element.title}</h2></div>
+              <div className="Discription-Div" ><h4>{element.description}</h4></div>
+              <button className="Btn-More"><Link to={`/campaigns/setiation/${element._id}`}>More</Link></button>
             </div>
           );
         })}
