@@ -37,43 +37,51 @@ const Register = () => {
       <p>Register:</p>
 
       <br />
-      <input
-        type={"text"}
-        placeholder={"first name"}
-        onChange={(e) => {
-          setFirstName(e.target.value);
-        }}
-      />
+      <div class="fa-solid fa-f">
+        <input
+          type={"text"}
+          placeholder={"first name"}
+          onChange={(e) => {
+            setFirstName(e.target.value);
+          }}
+        />
+      </div>
 
       <br />
-      <input
-        type={"text"}
-        placeholder={"last name"}
-        onChange={(e) => {
-          setLastName(e.target.value);
-        }}
-      />
-
-         
-      <br />
-      <input
-        type={"text"}
-        placeholder={"country"}
-        onChange={(e) => {
-          setCountry(e.target.value);
-        }}
-      />
+      <div class="fa-solid fa-l">
+        <input
+          type={"text"}
+          placeholder={"last name"}
+          onChange={(e) => {
+            setLastName(e.target.value);
+          }}
+        />
+      </div>
 
       <br />
-      <input
-        type={"text"}
-        placeholder={"email"}
-        onChange={(e) => {
-          setEmail(e.target.value);
-        }}
-      />
+      <div class="fa-solid fa-earth-americas">
+        <input
+          type={"text"}
+          placeholder={"country"}
+          onChange={(e) => {
+            setCountry(e.target.value);
+          }}
+        />
+      </div>
 
       <br />
+      <div class="fa-solid fa-at">
+        <input
+          type={"text"}
+          placeholder={"email"}
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
+        />
+      </div>
+      <br />
+      
+      <div class="fa-solid fa-lock" >
       <input
         type={"password"}
         placeholder={"password"}
@@ -81,6 +89,7 @@ const Register = () => {
           setPassword(e.target.value);
         }}
       />
+      </div>
 
       <br />
       <button onClick={addUser}>Register</button>
