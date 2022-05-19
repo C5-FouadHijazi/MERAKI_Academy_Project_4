@@ -66,12 +66,20 @@ const createNewSituations = (req, res) => {
 // This function updates Campaign by its id
 const updateSituationById = (req, res) => {
   const _id = req.params.id;
+  console.log(_id);
   const newDonate = req.body.amountDonated;
+  console.log(newDonate);
 
   situationsModel.findById({ _id }).then((result1) => {
+    console.log(
+      "=====================",
+      result1,
+      "=============================="
+    );
+
     situationsModel
       .updateOne(
-        {_id},
+        { _id },
         {
           $set: {
             amountNedded: result1.amountNedded - newDonate,

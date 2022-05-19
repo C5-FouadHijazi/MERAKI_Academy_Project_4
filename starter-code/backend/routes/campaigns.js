@@ -79,10 +79,9 @@ campaignsRouter.delete(
   deleteCampaignById
 );
 
-campaignsRouter.put(
+campaignsRouter.post(
   "/situations/:id",
   authentication,
-  authorization("UPDATE_CAM&SIT"),
   updateSituationById
 );
 
