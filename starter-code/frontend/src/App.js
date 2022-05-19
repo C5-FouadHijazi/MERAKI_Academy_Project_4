@@ -6,7 +6,7 @@ import Register from "./components/Register/Register";
 import Login from "./components/Login/Login";
 import Navbar from "./components/Navbar/Navbar";
 import Campaigns from "./components/Campaigns/Campaigns";
-
+import StripeContainer from "./components/Payment/StripeContainer";
 import Home from "./components/Home/Home";
 
 import Situations from "./components/Situations/situations";
@@ -38,7 +38,12 @@ const App = () => {
           <Route path="/Register" element={<Register />} />
 
           <Route path="/login" element={<Login />} />
+
           <Route path="/campaigns" element={<Campaigns />} />
+
+          <Route path="/payment" element={<StripeContainer />} />
+          
+
 
           <Route path="/campaigns/setiation/:id" element={<Situations />} />
 
