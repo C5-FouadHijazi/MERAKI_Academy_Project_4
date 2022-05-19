@@ -17,7 +17,7 @@
 
 .Our-Goles {
   display: grid;
- margin-left: 30px;
+  margin-left: 30px;
   text-decoration: double;
   padding: 30px;
   font-size: 20px;
@@ -28,7 +28,35 @@ h1 {
 }
 
 h2 {
+  justify-content: center;
   color: rebeccapurple;
+}
+
+.Our-Security {
+  margin-left: 10rem;
+  display: flex;
+  flex-direction: column;
+  text-decoration: double;
+  padding: 5px;
+  font-size: 15px;
+}
+.Our-Location {
+  display: flex;
+  justify-content: center;
+  text-decoration: double;
+  padding: 5px;
+  font-size: 15px;
+}
+
+h5 {
+  color: rgba(8, 1, 15, 0.522);
+  font-size: 50px;
+}
+
+.Social {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
 }
 p {
   color: rgba(43, 32, 32, 0.826);
