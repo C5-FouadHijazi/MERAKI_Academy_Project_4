@@ -2,13 +2,14 @@ import React, { useState, useContext } from "react";
 import axios from "axios";
 import "./style.css";
 import { tokenContext } from "../../App";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { token, setToken, islogin, setIslogin, message, setMessage } =
     useContext(tokenContext);
-
+    const navigate = useNavigate();
   const LogIN = () => {
     axios
       .post("http://localhost:5000/login/", {
@@ -28,26 +29,26 @@ const Login = () => {
         setMessage(err.res.data.message);
       });
   };
-
+ 
   return (
     <div className="Login-Continer">
       <p>Login:</p>
 
       <div>
-      <h6 class="fa-solid fa-at" >  Email:</h6>
-      <br />
-      <input
-        type={"text"}
-        placeholder={"Email Address*"}
-        onChange={(e) => {
-          setEmail(e.target.value);
-        }}
-      />
-</div>
+        <h6 class="fa-solid fa-at"> Email:</h6>
+
+        <input
+          type={"text"}
+          placeholder={"Email Address*"}
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
+        />
+      </div>
 
       <br />
-      <div >
-        <h6 class="fa-solid fa-lock">  Password:</h6>
+      <div>
+        <h6 class="fa-solid fa-lock"> Password:</h6>
         <br />
         <input
           type={"password"}
@@ -59,7 +60,18 @@ const Login = () => {
       </div>
 
       <br />
-      <button onClick={LogIN}>Login</button>
+      <button
+        onClick={() => {
+          if (true) {
+            LogIN();
+            navigate("/Home");
+          } else {
+            navigate("/login");
+          }
+        }}
+      >
+        Login
+      </button>
 
       <br />
       <h6>
