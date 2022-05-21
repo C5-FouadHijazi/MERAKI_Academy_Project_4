@@ -1,9 +1,5 @@
 const campaignsModel = require("../models/campaignsSchema");
 
-/* {   "title": "ايتام",
-"description": "قال الإمام النووي: قوله صلى الله عليه وسلم: (كافل اليتيم له أو لغيره أنا وهو كهاتين في الجنة ) كافل اليتيم القائم بأموره من نفقة وكسوة وتأديب وتربية وغير ذلك وهذه الفضيلة تحصل لمن كفله من مال نفسه ، أو من مال اليتيم بولاية شرعية.",
-"img": "https://cdn-5e6c81e5f911c80ca0fdddf4.closte.com/wp-content/uploads/2021/09/children-600.jpg"} */
-
 // This function creates new Campaign
 const createNewCampaign = (req, res) => {
   const { title, description, img } = req.body;
