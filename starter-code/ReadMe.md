@@ -65,16 +65,18 @@ git clone https://github.com/C5-FouadHijazi/MERAKI_Academy_Project_4.git
 npm i
 
 ```
-3. run both server using bash Backend & Frontend :
+3. run both server using bash Backend :
 
 ```
 npm run dev
 
 ```
+4. run both server using bash Frontend :
+
+```
 npm run start
 
 ```
-
 - now app ready to use 
 
 ```
