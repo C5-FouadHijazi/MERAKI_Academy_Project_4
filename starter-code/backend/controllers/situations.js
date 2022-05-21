@@ -3,8 +3,6 @@ const campaignsModel = require("../models/campaignsSchema");
 
 // This function creates a new Situation for a specific Campagins
 const createNewSituations = (req, res) => {
-  console.log(req);
-  console.log("--------------------------");
   const campaignId = req.params.id;
   const {
     title,
@@ -57,25 +55,13 @@ const createNewSituations = (req, res) => {
     });
 };
 
-//amountNedded = 500
-//amountDonated = 200 => 200 + 50 = 250
-//amountNedded = amoutStillNedded -amountDonated
-
-//how to update spesefic data by callculation in backend
-
-// This function updates Campaign by its id
+// This function updates Situation After Donate
 const updateSituationById = (req, res) => {
   const _id = req.params.id;
-  console.log(_id);
   const newDonate = req.body.amountDonated;
-  console.log(newDonate);
 
   situationsModel.findById({ _id }).then((result1) => {
-    console.log(
-      "=====================",
-      result1,
-      "=============================="
-    );
+    parseInt(newDonate);
 
     situationsModel
       .updateOne(
@@ -83,7 +69,7 @@ const updateSituationById = (req, res) => {
         {
           $set: {
             amountNedded: result1.amountNedded - newDonate,
-            amountDonated: result1.amountDonated + newDonate,
+            amountDonated: result1.amountDonated + parseInt(newDonate),
           },
         },
         { new: true }
@@ -109,12 +95,6 @@ const updateSituationById = (req, res) => {
         });
       });
   });
-  // console.log(
-  //   situationsModel.find({ _id }).then(async (result) => {
-  //     console.log("result2", result);
-  //     return result;
-  //   })
-  // );
 };
 
 const getAllsituations = (req, res) => {

@@ -79,7 +79,7 @@ campaignsRouter.delete(
   deleteCampaignById
 );
 
-campaignsRouter.post(
+campaignsRouter.put(
   "/situations/:id",
   authentication,
   updateSituationById
