@@ -86,6 +86,7 @@ App :https://45d4-78-163-102-232.eu.ngrok.io/Home
 1. If you only want to browse the app, All you need to swipe between pages hope we inspire you to give some help to others.
 2. If you are inspired to donate, All you need to follow these steps :
 - Make an account by clicking on Sign-Up > put all your information needed.
+
 - Go to the login page by clicking on Login at the header.
 - Go to campaigns and choose the one you wish to donate to.
 - Inter the amount you want to donate within the specific input filed.
