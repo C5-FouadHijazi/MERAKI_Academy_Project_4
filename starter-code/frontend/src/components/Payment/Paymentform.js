@@ -15,7 +15,8 @@ const CARD_OPTIONS = {
 			fontSize: "16px",
 			fontSmoothing: "antialiased",
 			":-webkit-autofill": { color: "#fce883" },
-			"::placeholder": { color: "#87bbfd" }
+			"::placeholder": { color: "#87bbfd" },
+            paddingtop: "25px"
 		},
 		invalid: {
 			iconColor: "#ffc7ee",
@@ -68,7 +69,11 @@ const CARD_OPTIONS = {
                     <CardElement options={CARD_OPTIONS}/>
                 </div>
             </fieldset>
-            <button>Pay</button>
+            <button onClick={()=>{
+                if(true){
+                    return <h2>You just make a dontae congrats ,this is a blessed decision in you're life Jazak-Allah Khair</h2>
+                }
+            }}>Pay</button>
         </form>
         :
        <div>
