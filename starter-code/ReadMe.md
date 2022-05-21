@@ -94,6 +94,11 @@ App :https://45d4-78-163-102-232.eu.ngrok.io/Home
 - inter your credit card details and pay.
 - May Allah grand your gives.
 
+##  Data Flow <a name = "data_fkow"></a>
+
+<img src="./Schemas.png" />
+
+
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
