@@ -22,7 +22,9 @@ const Navbar = () => {
 
   return (
     <div className="Navbar">
-      <h1 className="Navbar-logo">
+      <h1 onClick={()=>{
+        navigate("/home")
+      }}  className="Navbar-logo">
         Ataa<i className="fa-solid fa-seedling"></i>
       </h1>
       {/* how to  */}
@@ -47,7 +49,7 @@ const Navbar = () => {
 
             <li>
               <Link className="nav-link" to="/logout" onClick={logOut}>
-                logout
+                Logout
               </Link>
             </li>
           </>
@@ -65,12 +67,12 @@ const Navbar = () => {
             </li>
             <li>
               <Link className="nav-link" to="/Register/">
-                Register
+                Sigin-Up
               </Link>
             </li>
             <li>
               <Link className="nav-link" to="/login">
-                login
+                Login
               </Link>
             </li>
             <li>
