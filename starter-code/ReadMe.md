@@ -69,30 +69,29 @@ npm i
 
 ```
 Backend : npm run dev
+
+```
 fronend : npm run start
 
 ```
 
-
-```
 now app ready to use 
 
 App :https://45d4-78-163-102-232.eu.ngrok.io/Home
 ```
 
-End with an example of getting some data out of the system or using it for a little demo.
 
 ## 🎈 Usage <a name="usage"></a>
 
-*If you only want to browse the app, All you need to swipe between pages hope we inspire you to give some help to others.
-*If you are inspired to donate, All you need to follow these steps :
-1- Make an account by clicking on Sign-Up > put all your information needed.
-2-Go to the login page by clicking on Login at the header.
-3-Go to campaigns and choose the one you wish to donate to.
-4-Inter the amount you want to donate within the specific input filed.
-5-click on donate button.
-6-inter your credit card details and pay.
-7.May Allah grand your gives.
+1. If you only want to browse the app, All you need to swipe between pages hope we inspire you to give some help to others.
+2. If you are inspired to donate, All you need to follow these steps :
+- Make an account by clicking on Sign-Up > put all your information needed.
+- Go to the login page by clicking on Login at the header.
+- Go to campaigns and choose the one you wish to donate to.
+- Inter the amount you want to donate within the specific input filed.
+- Click on donate button.
+- inter your credit card details and pay.
+- May Allah grand your gives.
 
 
 ## ⛏️ Built Using <a name = "built_using"></a>
