@@ -7,8 +7,11 @@ import { Link, useNavigate } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const { token, setToken, islogin, setIslogin, message, setMessage } =
     useContext(tokenContext);
+
+    
     const navigate = useNavigate();
   const LogIN = () => {
     axios
@@ -31,13 +34,13 @@ const Login = () => {
   };
  
   return (
-    <div className="Login-Continer">
+    <div   className="Login-Continer">
       <p>Login:</p>
 
       <div>
         <h6 class="fa-solid fa-at"> Email:</h6>
 
-        <input
+        <input class="input"
           type={"text"}
           placeholder={"Email Address*"}
           onChange={(e) => {
@@ -50,7 +53,7 @@ const Login = () => {
       <div>
         <h6 class="fa-solid fa-lock"> Password:</h6>
         <br />
-        <input
+        <input class="input"
           type={"password"}
           placeholder={"Password*"}
           onChange={(e) => {
@@ -72,7 +75,10 @@ const Login = () => {
       >
         Login
       </button>
-
+      <br />
+      <a href="">Forgot password?</a>
+      <br />
+      <h4>Don't have an account?</h4><a href="">Sign up</a>
       <br />
       <h6>
         *By logging in, you agree to our Terms of Use and to receive Atta emails
