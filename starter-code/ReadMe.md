@@ -57,7 +57,6 @@ A step by step series of examples that tell you how to get a development env run
 
 ```
 git clone https://github.com/C5-FouadHijazi/MERAKI_Academy_Project_4.git
-
 ```
 2. install packges repeat this in backend and front end folder
 
