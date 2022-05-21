@@ -65,18 +65,19 @@ git clone https://github.com/C5-FouadHijazi/MERAKI_Academy_Project_4.git
 npm i
 
 ```
-3. run both server using bash:
+3. run both server using bash Backend & Frontend :
 
 ```
-Backend : npm run dev
+npm run dev
 
 ```
-fronend : npm run start
+npm run start
 
 ```
 
-now app ready to use 
+- now app ready to use 
 
+```
 App :https://45d4-78-163-102-232.eu.ngrok.io/Home
 ```
 
