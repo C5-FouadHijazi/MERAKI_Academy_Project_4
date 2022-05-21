@@ -33,14 +33,14 @@ const Register = () => {
       });
   };
   return (
-    <div className="Login-Continer">
+    <div  className="Login-Continer">
       <p>Register:</p>
       <br />
 
       <div>
         <h6 class="fa-solid fa-f"> : Fitst name :</h6>
         <br />
-        <input
+        <input class="input"
           type={"text"}
           placeholder={"first name"}
           onChange={(e) => {
@@ -53,7 +53,7 @@ const Register = () => {
       <div>
         <h6  class="fa-solid fa-l">: Last Name :</h6>
         <br />
-        <input
+        <input class="input"
           type={"text"}
           placeholder={"last name"}
           onChange={(e) => {
@@ -66,7 +66,7 @@ const Register = () => {
       <div >
         <h6 class="fa-solid fa-earth-americas"> Country</h6>
         <br />
-        <input
+        <input class="input"
           type={"text"}
           placeholder={"Country*"}
           onChange={(e) => {
@@ -79,7 +79,7 @@ const Register = () => {
       <div >
         <h6 class="fa-solid fa-at"> Email:</h6>
         <br />
-        <input
+        <input class="input"
           type={"text"}
           placeholder={"email"}
           onChange={(e) => {
@@ -92,7 +92,7 @@ const Register = () => {
       <div >
         <h6 class="fa-solid fa-lock"> Password:</h6>
         <br />
-        <input
+        <input class="input"
           type={"password"}
           placeholder={"password"}
           onChange={(e) => {
