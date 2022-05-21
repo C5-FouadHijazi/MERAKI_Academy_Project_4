@@ -39,8 +39,12 @@ These instructions will get you a copy of the project up and running on your loc
 
 ```
 1.Visual Studio Code follow this  <a href="https://visualstudio.microsoft.com/vs/">link</a> to install.
+
+```
 2.Git Bash follow this <a href="https://git-scm.com/downloads">link</a> to install.
+```
 3.MongoDB follow this <a href="https://www.mongodb.com/try/download/community">link</a> to install.
+```
 4.Node.js follow this <a href="https://nodejs.org/en/download/">link</a> to install.
 
 ```
