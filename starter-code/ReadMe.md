@@ -86,12 +86,16 @@ App :https://45d4-78-163-102-232.eu.ngrok.io/Home
 1. If you only want to browse the app, All you need to swipe between pages hope we inspire you to give some help to others.
 2. If you are inspired to donate, All you need to follow these steps :
 - Make an account by clicking on Sign-Up > put all your information needed.
-
+<img src="./register.png"/>
 - Go to the login page by clicking on Login at the header.
+<img src="./login.png"/>
 - Go to campaigns and choose the one you wish to donate to.
+<img src="./camp.png"/>
 - Inter the amount you want to donate within the specific input filed.
 - Click on donate button.
+<img src="./donate.png"/>
 - inter your credit card details and pay.
+<img src="./Pay.png"/>
 - May Allah grand your gives.
 
 ##  Data Flow <a name = "data_fkow"></a>
