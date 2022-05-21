@@ -12,6 +12,7 @@ import Home from "./components/Home/Home";
 import Situations from "./components/Situations/situations";
 
 import Contact from "./Contsct Us/ContactUs";
+/* import { MessengerChat, showMessenger, hideMessenger, showDialog, hideDialog, setMessengerHeight } from 'react-messenger-customer-chat'; */
 
 
 export const tokenContext = createContext();
@@ -23,6 +24,15 @@ const App = () => {
 
   return (
     <div className="App">
+      
+     {/*   <button onClick={() => {showMessenger(true)}}>show messenger</button>
+      <button onClick={() => {hideMessenger()}}>hide messenger</button>
+      <button onClick={() => {showDialog()}}>show dialog</button>
+      <button onClick={() => {hideDialog()}}>hide dialog</button>
+      <button onclick={() => {setMessengerBottomSpacing(100)}}>set chat 100px in bottom spacing<button> */}
+
+     {/*  <MessengerChat pageId='123456789101112' /> */}
+
       <tokenContext.Provider
         value={{
           token,
@@ -33,8 +43,9 @@ const App = () => {
           setIslogin,
         }}
       >
-        {/* <Navigation /> */}
+       
         <Navbar />
+        
 
         <Routes>
           <Route path="/Register" element={<Register />} />

@@ -3,6 +3,7 @@
     "@stripe/react-stripe-js": "^1.8.0",
     "@stripe/stripe-js": "^1.29.0",
     "country-list": "^2.2.0",
-    "react-jvectormap": "^0.0.16"
+    "react-jvectormap": "^0.0.16",
+    "react-messenger-chat-plugin": "^3.0.5"
   }
 }

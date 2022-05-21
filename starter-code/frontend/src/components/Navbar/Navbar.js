@@ -16,23 +16,28 @@ const Navbar = () => {
     setToken("");
   };
 
- /*  const handleClick = () => {
+  /*  const handleClick = () => {
     setClciked(true);
   }; */
 
   return (
     <div className="Navbar">
-      <h1 onClick={()=>{
-        navigate("/home")
-      }}  className="Navbar-logo">
+      <h1
+        onClick={() => {
+          navigate("/home");
+        }}
+        className="Navbar-logo"
+      >
         Ataa<i className="fa-solid fa-seedling"></i>
       </h1>
       {/* how to  */}
       <ul className="Nav-menu">
         {islogin === true ? (
           <>
-            <li >
-              <Link className="nav-link" to="/Home">Home</Link>
+            <li>
+              <Link className="nav-link" to="/Home">
+                Home
+              </Link>
             </li>
 
             <li>

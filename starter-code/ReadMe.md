@@ -1,13 +1,15 @@
+
+
 <p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+  <a  rel="noopener">
+ <img width=200px height=200px src="./Ataa_Logo.png" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Project Title</h3>
+<h3 align="center">Ataa Relief</h3>
 
 ---
 
-<p align="center"> Few lines describing your project.
+<p align="center"> Ataa its Relief for collecting donations.
     <br> 
 </p>
 
@@ -21,7 +23,11 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+Giving promotes feelings of happiness.
+
+Helping others feels good. When you donate to our Atta relief or other  charity that is important to you, you not only help them continue their vital work, but you're also improving your emotional wellbeing, a win-win situation, and helping other people  complement their main needs in life 
+
+Donating to Ataa relif the causes you care about not only benefits the charities themselves but can also be deeply rewarding for you too. Millions of people give to charity on a regular basis to support causes they believe in, as well as for the positive effect it has on their own lives
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
@@ -29,33 +35,61 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them.
+ Software need to install and how to install them:
 
 ```
-Give examples
+1.Visual Studio Code follow this  <a href="https://visualstudio.microsoft.com/vs/">link</a> to install.
+2.Git Bash follow this <a href="https://git-scm.com/downloads">link</a> to install.
+3.MongoDB follow this <a href="https://www.mongodb.com/try/download/community">link</a> to install.
+4.Node.js follow this <a href="https://nodejs.org/en/download/">link</a> to install.
+
 ```
 
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running.
 
-Say what the step will be
+1. Clone the repo to your local machine using git bash
 
 ```
-Give the example
-```
-
-And repeat
+git clone https://github.com/C5-FouadHijazi/MERAKI_Academy_Project_4.git
 
 ```
-until finished
+2. install packges repeat this in backend and front end folder
+
+```
+npm i
+
+```
+3. run both server using bash:
+
+```
+Backend : npm run dev
+fronend : npm run start
+
+```
+
+
+```
+now app ready to use 
+
+App :https://45d4-78-163-102-232.eu.ngrok.io/Home
 ```
 
 End with an example of getting some data out of the system or using it for a little demo.
 
 ## 🎈 Usage <a name="usage"></a>
 
-Add notes about how to use the system.
+*If you only want to browse the app, All you need to swipe between pages hope we inspire you to give some help to others.
+*If you are inspired to donate, All you need to follow these steps :
+1- Make an account by clicking on Sign-Up > put all your information needed.
+2-Go to the login page by clicking on Login at the header.
+3-Go to campaigns and choose the one you wish to donate to.
+4-Inter the amount you want to donate within the specific input filed.
+5-click on donate button.
+6-inter your credit card details and pay.
+7.May Allah grand your gives.
+
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
@@ -63,6 +97,11 @@ Add notes about how to use the system.
 - [Express JS](https://expressjs.com/) - Server Framework
 - [React JS](https://https://reactjs.org/) - Web Framework
 - [Node JS](https://nodejs.org/en/) - Server Environment
+
+
+##  User Story <a name = "user_story"></a>
+
+follow this link <a href="https://trello.com/b/r1wlKLsO/ataareliefme" >Trello</a>
 
 ## ⚠️ Guided By <a name = "guided_by"></a>
 
