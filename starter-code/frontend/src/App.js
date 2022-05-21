@@ -11,6 +11,8 @@ import Home from "./components/Home/Home";
 
 import Situations from "./components/Situations/situations";
 
+import Contact from "./Contsct Us/ContactUs";
+
 
 export const tokenContext = createContext();
 
@@ -48,6 +50,9 @@ const App = () => {
           <Route path="/campaigns/setiation/:id" element={<Situations />} />
 
           <Route path="/Home" element={<Home />} />
+
+          <Route path="/ContactUs" element={<Contact />} />
+
         </Routes>
       </tokenContext.Provider>
     </div>
