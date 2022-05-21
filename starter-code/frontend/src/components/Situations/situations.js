@@ -8,13 +8,14 @@ import StripeContainer from "../Payment/StripeContainer";
 
 const Situations = () => {
   const [situations, setSituations] = useState([]);
-  const [donate, setDonate] = useState(0);
+  const [amountDonated, setamountDonated] = useState(0);
   const [showItem, setShowItem] = useState(false);
 
   const { token, setToken, islogin, setIslogin, message, setMessage } =
     useContext(tokenContext);
-
+  const MAX_LENGTH = 90;
   setToken(localStorage.getItem("token"));
+
   const navigate = useNavigate();
 
   const { id } = useParams();
@@ -43,9 +44,11 @@ const Situations = () => {
     });
     console.log(id);
     axios
-      .post(
+      .put(
         `http://localhost:5000/campaigns/situations/${id}`,
-        { donate },
+
+        { amountDonated },
+
         {
           headers: {
             authorization: `Bearer ${token}`,
@@ -74,28 +77,27 @@ const Situations = () => {
 
           return (
             <div className="Situations-dev" key={element.id}>
-              <div>
-                <img src={element.img} />
+              <div className="Situations-Pic-Div">
+                <img className="Situations-Pic" src={element.img} />
               </div>
-              <div>
+              <div className="Situations-title-Div">
                 <h2>{element.title}</h2>
               </div>
-              <div>
-                <h3>{element.description}</h3>
-                <h3> Case Number : {element.caseNumber}</h3>
-                <h3>Total Amount Need : {element.amoutStillNedded}</h3>
-                <h3>Amount Still Need : {element.amountNedded}</h3>
-                <h3>Total Amount Donated :{element.amountDonated}</h3>
+              <div className="Case-Detailes-Div">
+              <div className="description-div" ><h3> {`${element.description.substring(0, MAX_LENGTH)}...`}</h3></div>
+                <div><h3> Case Number :{element.caseNumber}</h3></div>
+                <div><h3>Total Amount Need :{element.amoutStillNedded}</h3></div>
+                <div><h3>Amount Still Need :{element.amountNedded}</h3></div>
+                <div><h3>Total Amount Donated :{element.amountDonated}</h3></div>
               </div>
 
-              
               <div>
                 <input
-                  type="number"
-                  placeholder={"0$"}
+                  type={"number"}
+                  placeholder="0$"
                   onChange={(e) => {
-                    setDonate(e.target.value);
-                    console.log(e.target.value);
+                    setamountDonated(e.target.value);
+                    console.log(amountDonated);
                   }}
                 />
 
@@ -114,7 +116,7 @@ const Situations = () => {
                   Donate
                 </button>
 
-               {/*  <div>
+                {/*  <div>
                   {showItem && islogin ? (
                     <>
                       <button
@@ -136,11 +138,8 @@ const Situations = () => {
                 </div> */}
               </div>
             </div>
-            
           );
-          
         })}
-        
     </div>
   );
 };
