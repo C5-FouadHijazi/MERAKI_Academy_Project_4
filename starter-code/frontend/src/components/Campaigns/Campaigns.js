@@ -13,7 +13,7 @@ const Campaigns = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/campaigns", {
+      .get("https://attadonation.herokuapp.com/campaigns", {
         headers: {
           authorization: `Bearer ${token}`,
         },

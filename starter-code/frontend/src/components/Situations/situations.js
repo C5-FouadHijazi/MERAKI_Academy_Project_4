@@ -22,7 +22,7 @@ const Situations = () => {
 
   const get = () => {
     axios
-      .get(`http://localhost:5000/campaigns/${id}/situations`, {
+      .get(`https://attadonation.herokuapp.com/campaigns/${id}/situations`, {
         headers: {
           authorization: `Bearer ${token}`,
         },
@@ -45,7 +45,7 @@ const Situations = () => {
     console.log(id);
     axios
       .put(
-        `http://localhost:5000/campaigns/situations/${id}`,
+        `https://attadonation.herokuapp.com/campaigns/situations/${id}`,
 
         { amountDonated },
 

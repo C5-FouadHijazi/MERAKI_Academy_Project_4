@@ -42,7 +42,7 @@ const CARD_OPTIONS = {
     if(!error) {
         try {
             const {id} = paymentMethod
-            const response = await axios.post("http://localhost:5000/payment", {
+            const response = await axios.post("https://attadonation.herokuapp.com/payment", {
                 amount: 1000,
                 id
             })

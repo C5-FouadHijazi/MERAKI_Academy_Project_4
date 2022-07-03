@@ -7,7 +7,7 @@ require("./models/db");
 // disable cashing // have a delay // only update the 
 
 const app = express();
-const PORT = 5000;
+const PORT = prosses.env.PORT || 5000 ;
 
 app.use(cors());
 app.use(express.json());

@@ -62,7 +62,11 @@ const App = () => {
 
           <Route path="/Home" element={<Home />} />
 
+          <Route path="/" element={<Home />} />
+
           <Route path="/ContactUs" element={<Contact />} />
+
+
 
         </Routes>
       </tokenContext.Provider>

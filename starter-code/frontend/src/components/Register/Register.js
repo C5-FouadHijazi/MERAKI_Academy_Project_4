@@ -14,7 +14,7 @@ const Register = () => {
 
   const addUser = () => {
     axios
-      .post("http://localhost:5000/users/", {
+      .post("https://attadonation.herokuapp.com/users/", {
         email,
         password,
         country,

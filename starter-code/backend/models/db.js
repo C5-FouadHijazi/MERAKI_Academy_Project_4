@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 // connecting to mongodb
-mongoose.connect(process.env.DB_URI).then(
+mongoose.connect("mongodb+srv://FouadHijazi:uHAiNLux9KnCQiiW@cluster0.zwg48bv.mongodb.net/FouadHijaziDatabase?retryWrites=true&w=majority").then(
   () => {
     console.log("DB Ready To Use");
   },
