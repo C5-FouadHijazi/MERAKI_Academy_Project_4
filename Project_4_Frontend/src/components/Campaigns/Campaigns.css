@@ -1,0 +1,88 @@
+.Main-Campaigns-Dev {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  height: max-content (+100px);
+  background-color: aliceblue;
+  border-radius: 3px;
+  gap: 1rem;
+  padding :2rem;
+}
+
+.campaigns-dev:hover {
+  transform: scale(0.99);
+  cursor: pointer;
+}
+
+.campaigns-dev {
+  overflow: hidden;
+  position: relative; 
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 2rem;
+  border: 0.3rem solid #f82f5087;
+  height: 40rem;
+  width: 30rem;
+  box-shadow: 0 0.5rem 2rem black;
+  padding-bottom: 0px;
+  grid-auto-rows: min-content;
+  background-color: rgba(162, 120, 204, 0.219);
+  padding : .6rem;
+}
+
+.Pic-Div {
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+  object-fit: fill;
+  width: 40rem;
+  height: 25rem;
+  border: 0.5rem solid rgba(162, 120, 204, 0);
+}
+.Title-Camapigin {
+  position: absolute;
+  overflow: visible;
+  font-style: normal;
+  font-size: 23px;
+  font-weight: bolder;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(49, 45, 45);
+  text-shadow: 2px 2px #e6d6d6;
+  display: flex;
+  margin-left: 10px;
+  align-items: center
+}
+
+.Camapigin-Name-Div {
+  position: relative;
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 25px;
+}
+
+
+.Discription-Div {
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-width: 100%;
+  height: 5.5rem;
+  margin-left: 25px;
+  margin-top: 1rem;
+}
+
+.Btn-More{
+  box-shadow: #f20660 .1rem .1rem;
+  
+}
+
+a{
+  text-decoration: none;
+  color: aliceblue;
+}

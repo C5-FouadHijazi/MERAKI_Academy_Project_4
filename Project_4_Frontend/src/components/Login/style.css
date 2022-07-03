@@ -1,0 +1,31 @@
+.Login-Continer {
+  display: grid;
+  grid-template-columns:min-content;
+  background-color: rgba(8, 0, 255, 0.328);
+  justify-content: center;
+  /* border: 5px solid rgba(56, 11, 64, 0.767); */
+  border-radius: 2%;
+  width: 30%;
+  padding: 2rem;
+  margin-left: 36%;
+  margin-top: 3%;
+  padding-top: 30px;
+  max-height: 33rem;
+}
+
+Form {
+  padding-top: 80px;
+  margin-left: 30%;
+}
+
+.FormGroup {
+  max-width: 60%;
+}
+
+a {
+  color: rgba(56, 11, 64, 0.767);
+}
+p{
+    font-size: 20px;
+}
+
